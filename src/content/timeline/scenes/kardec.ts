@@ -16,7 +16,8 @@ export const kardecScene: TimelineScene = {
   },
   appearance: {
     imageFilter: "sepia(.22) contrast(1.04) saturate(.68)",
-    overlay: "linear-gradient(to bottom, rgba(36,27,20,.04), rgba(25,20,16,.07) 58%, rgba(20,16,13,.76))",
+    overlay:
+      "linear-gradient(to bottom, rgba(36,27,20,.04), rgba(25,20,16,.07) 58%, rgba(20,16,13,.76))",
     accent: "#c9a45c",
     textColor: "#f5efe3",
   },
@@ -59,8 +60,18 @@ export const kardecScene: TimelineScene = {
       ariaLabel: "Abrir aprofundamento sobre a pena e o trabalho de escrita",
       asset: "/timeline/kardec/Trabalhos.svg",
       position: {
-        mobile: { top: "50%", left: "1%", width: "34%", transform: "rotate(-4deg)" },
-        desktop: { top: "50%", left: "2%", width: "33%", transform: "rotate(-4deg)" },
+        mobile: {
+          top: "50%",
+          left: "1%",
+          width: "34%",
+          transform: "rotate(-4deg)",
+        },
+        desktop: {
+          top: "50%",
+          left: "2%",
+          width: "33%",
+          transform: "rotate(-4deg)",
+        },
       },
       highlightMode: "glow",
       highlightColor: "#d5c3a2",
@@ -95,8 +106,8 @@ export const kardecScene: TimelineScene = {
       ariaLabel: "Abrir aprofundamento sobre cartas e anotações",
       asset: "/timeline/kardec/Carta.svg",
       position: {
-        mobile: { top: "75%", left: "7%", width: "34%" },
-        desktop: { top: "74%", left: "8%", width: "33%" },
+        mobile: { top: "56%", left: "25%", width: "34%" },
+        desktop: { top: "56%", left: "25%", width: "33%" },
       },
       highlightMode: "outline",
       highlightColor: "#ead38c",
@@ -124,7 +135,8 @@ export const kardecScene: TimelineScene = {
         references: [
           {
             label: "Controle universal do ensino dos Espíritos",
-            source: "Allan Kardec — O Evangelho segundo o Espiritismo, Introdução, item II",
+            source:
+              "Allan Kardec — O Evangelho segundo o Espiritismo, Introdução, item II",
             url: "https://www.kardecpedia.com/roteiro-de-estudos/887/o-evangelho-segundooespiritismo/2052/introducao/ii-autoridade-da-doutrina-espirita",
           },
           {
@@ -137,4 +149,3 @@ export const kardecScene: TimelineScene = {
     },
   ],
 };
-
