@@ -1,17 +1,29 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-charcoal: #1d1b18;
+  --color-brown: #403328;
+  --color-paper: #e8ddc8;
+  --color-paper-deep: #d5c3a2;
+  --color-ink-muted: #777168;
+  --color-purple: #3f2a56;
+  --color-purple-deep: #291c3a;
+  --color-gold: #c9a45c;
+  --color-gold-light: #ead38c;
+  --color-gold-deep: #8c6a32;
+  --color-overlay: rgba(18, 15, 13, 0.64);
+  --color-focus: #f4d980;
+  --text-hero: clamp(2.8rem, 13vw, 4.3rem);
+  --text-scene-title: clamp(2.2rem, 10vw, 3.4rem);
+  --text-detail-title: clamp(2rem, 9vw, 3rem);
+  --text-body: clamp(1.0625rem, 4.4vw, 1.1875rem);
+  --text-interface: 1rem;
+  --text-small: 0.875rem;
 }
 
 html {
   height: 100%;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  background: var(--color-charcoal);
 }
 
 html,
@@ -22,11 +34,10 @@ body {
 
 body {
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-paper);
+  background: var(--color-charcoal);
+  font-family: var(--font-interface), Arial, Helvetica, sans-serif;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,8 +53,27 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button,
+a,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--color-charcoal);
+  background: var(--color-gold-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
   }
 }
